@@ -1,0 +1,45 @@
+{
+  "name": "@articul8/bivia-mcp",
+  "version": "1.1.0",
+  "description": "MCP server exposing the Bivia decision API as tools — one-line install for Claude Code, Codex, and VS Code.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "bin": {
+    "bivia-mcp": "./server.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./server.js",
+  "exports": {
+    ".": "./server.js",
+    "./oauth": "./oauth.js"
+  },
+  "files": [
+    "server.js",
+    "format.js",
+    "oauth.js",
+    "skills",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bivia",
+    "articul8",
+    "claude-code",
+    "codex",
+    "decision"
+  ],
+  "dependencies": {
+    "@articul8/bivia": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  }
+}
